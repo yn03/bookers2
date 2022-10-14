@@ -1,13 +1,13 @@
-  <%= form_with model: @user, url: user_path(@user.id), method: :patch do |f| %>
+<%= form_with model: @user, url: user_path(@user.id), method: :patch do |f| %>
   <% if @user.errors.any? %>
-  <%= @user.errors.count %> error prohibited this obj from being saved:
-  <ul>
-    <% @user.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-    <% end %>
+    <%= @user.errors.count %> error prohibited this obj from being saved:
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
     </ul>
   <% end %>
+<% end %>
 
 
 <p id="notice"></p>
@@ -17,23 +17,23 @@
       <h2>User info</h2>
 
       <%= form_with model: @user do |f| %>
-      <div class="form-group">
-        <label for="user_name">Name</label>
-        <p><%= f.text_field :name %></p>
-      </div>
+        <div class="form-group">
+          <label for="user_name">Name</label>
+          <p><%= f.text_field :name %></p>
+        </div>
 
-      <div class="form-group">
-        <label for="user_image">Image</label>
-        <p><%= f.file_field :profile_image, accept: "image/*" %></p>
-      </div>
+        <div class="form-group">
+          <label for="user_image">Image</label>
+          <p><%= f.file_field :profile_image, accept: "image/*" %></p>
+        </div>
 
-      <div class="form-group">
-        <label for="user_introduction">Introduction</label>
-        <p><%= f.text_area :introduction %></p>
-      </div>
-      <div class="form-group">
-        <p><%= f.submit "Update User", class: 'btn btn-secondary'%></p>
-      </div>
+        <div class="form-group">
+          <label for="user_introduction">Introduction</label>
+          <p><%= f.text_area :introduction %></p>
+        </div>
+        <div class="form-group">
+          <p><%= f.submit "Update User", class: 'btn btn-secondary'%></p>
+        </div>
       <% end %>
     </div>
   </div>
