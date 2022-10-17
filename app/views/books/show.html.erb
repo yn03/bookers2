@@ -26,10 +26,10 @@
             </td>
             <% if @user == current_user %>
               <td>
-                <%= link_to "Edit",edit_book_path(@book_show.id), class: 'btn btn-sm btn-success' %>
+                <%= link_to "Edit",edit_book_path(@book_show.id), class: 'btn btn-sm btn-outline-success' %>
               </td>
               <td>
-                <%= link_to "Destroy",book_path(@book_show.id),method: :delete, "data-confirm" => "本当に消しますか？",class: 'btn btn-sm btn-danger' %>
+                <%= link_to "Destroy",book_path(@book_show.id),method: :delete, "data-confirm" => "本当に消しますか？",class: 'btn btn-sm btn-outline-danger' %>
               </td>
             <% end %>
           </tr>
